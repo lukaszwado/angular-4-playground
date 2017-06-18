@@ -25,6 +25,8 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
 import {ContentDrawerComponent} from './content-drawer/content-drawer.component';
 import {SearchResultComponent} from './search-result/search-result.component';
 
+import {ListingsService} from './listings.service'
+
 @NgModule( {
   declarations: [
     AppComponent,
@@ -53,7 +55,7 @@ import {SearchResultComponent} from './search-result/search-result.component';
       component: SearchResultComponent
     } ] )
   ],
-  providers: [],
+  providers: [ ListingsService ],
   bootstrap: [ AppComponent ]
 } )
 export class AppModule {

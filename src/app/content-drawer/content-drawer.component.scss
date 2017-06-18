@@ -8,9 +8,34 @@
   background: #fff;
   z-index: 1;
   transform: translateX(100%);
-  transition: transform .35s ease-in-out .1s;
+  animation-fill-mode: forwards;
 }
 
 .rico-content-drawer--open {
-  transform: translateX(0);
+  animation: openDrawer .35s ease-in-out .05s forwards;
+}
+
+.rico-content-drawer__close {
+  margin-right: 10px;
+  .material-icons {
+    line-height: 38px;
+    text-align: center;
+  }
+}
+
+.rico-content-drawer__header--1 {
+  margin: 0 0 30px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+@keyframes openDrawer {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

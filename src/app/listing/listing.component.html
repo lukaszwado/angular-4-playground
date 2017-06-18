@@ -1,13 +1,16 @@
-<a class="rico-listing" fxLayout="row" routerLink="/" routerLinkActive="active" [queryParams]="{productId: 1}">
+<a class="rico-listing"
+   fxLayout="row" routerLink="/"
+   routerLinkActive="rico-listing--active"
+   [queryParams]="{productId: listingId}">
     <div>
         <img class="rico-listing__image"
-             src="//images.ricardostatic.ch/image/upload/t_180x180/v1/product/live/916480374_v0_1"
+             [src]="listingDetails.imgSm"
              alt="iPhone 5C 16 GB, Weiss">
     </div>
     <div class="rico-listing__content" fxFlex fxLayout="row" fxLayoutAlign="start stretch">
         <section fxLayout="column" fxLayoutAlign="stretch" fxFlex>
             <h1 class="rico-listing__header">
-                Apple iPhone 6 Silver 16GB
+                {{listingDetails.title}}
             </h1>
             <content class="rico-listing__header--1">
                 Weiss-silber ohne Zubehör
@@ -26,10 +29,10 @@
             </span>
             <div fxFlex></div>
             <div class="rico-listing__price">
-                16 Gebote <span>249.00</span>
+                16 Gebote <span>{{listingDetails.price.auction}}</span>
             </div>
             <div class="rico-listing__price rico-listing__price--blue">
-                Sofort kaufen <span>449.00</span>
+                Sofort kaufen <span>{{listingDetails.price.bunNow}}</span>
             </div>
         </aside>
     </div>

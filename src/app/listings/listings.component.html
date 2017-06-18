@@ -2,21 +2,21 @@
     <md-tab-group>
         <md-tab>
             <ng-template md-tab-label>
-                Alle <span class="rico-counter">(9788)</span>
+                Alle <span class="rico-counter">(9000)</span>
             </ng-template>
-            <app-listing *ngFor="let listing of [1,2,3,4,5,6,7,8,9,10]"></app-listing>
+            <app-listing *ngFor="let listing of [0,1,2,3,4,5,6,7,8,9]" [listingId]="listing"></app-listing>
         </md-tab>
         <md-tab>
             <ng-template md-tab-label>
-                Auktion <span class="rico-counter">(9788)</span>
+                Auktion <span class="rico-counter">(4500)</span>
             </ng-template>
-            <app-listing *ngFor="let listing of [1,2,3,4]"></app-listing>
+            <app-listing *ngFor="let listing of [2,3,4]" [listingId]="listing"></app-listing>
         </md-tab>
         <md-tab>
             <ng-template md-tab-label>
-                Sofortkauf <span class="rico-counter">(9788)</span>
+                Sofortkauf <span class="rico-counter">(4500)</span>
             </ng-template>
-            <app-listing *ngFor="let listing of [1,2]"></app-listing>
+            <app-listing *ngFor="let listing of [1,2]" [listingId]="listing"></app-listing>
         </md-tab>
     </md-tab-group>
 </div>

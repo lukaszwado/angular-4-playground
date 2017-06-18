@@ -1,5 +1,22 @@
-<section class="rico-content-drawer mat-elevation-z2" [ngClass]="{'rico-content-drawer--open': open}">
-    <button md-button (click)="close()">Close</button>
-    <h1>Apple iPhone 6 Silver 16GB</h1>
-    dsfjsdhf dsfsd fsdf
+<section class="rico-content-drawer mat-elevation-z2" [ngClass]="{'rico-content-drawer--open': listingId !== undefined}"
+         *ngIf="listingId !== undefined">
+    <h1 class="rico-content-drawer__header--1">
+        <button class="rico-content-drawer__close" md-mini-fab (click)="close()">
+            <md-icon class="material-icons">keyboard_arrow_right</md-icon>
+        </button>
+        {{listingDetails.title}}
+    </h1>
+    <article>
+        <img [src]="listingDetails.imgLg">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas pulvinar
+            erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
+            molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
+            Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec mattis
+            nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
+            ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris, tempus
+            in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam sit
+            amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
+        </p>
+    </article>
 </section>
