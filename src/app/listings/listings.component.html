@@ -1,0 +1,22 @@
+<div>
+    <md-tab-group>
+        <md-tab>
+            <ng-template md-tab-label>
+                Alle <span class="rico-counter">(9788)</span>
+            </ng-template>
+            <app-listing *ngFor="let listing of [1,2,3,4,5,6,7,8,9,10]"></app-listing>
+        </md-tab>
+        <md-tab>
+            <ng-template md-tab-label>
+                Auktion <span class="rico-counter">(9788)</span>
+            </ng-template>
+            <app-listing *ngFor="let listing of [1,2,3,4]"></app-listing>
+        </md-tab>
+        <md-tab>
+            <ng-template md-tab-label>
+                Sofortkauf <span class="rico-counter">(9788)</span>
+            </ng-template>
+            <app-listing *ngFor="let listing of [1,2]"></app-listing>
+        </md-tab>
+    </md-tab-group>
+</div>

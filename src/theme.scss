@@ -1,0 +1,16 @@
+@import "vars";
+
+// mandatory stuff for theming
+$rico-primary-palette: mat-palette($rico-brand-indigo);
+$rico-accent-palette:  mat-palette($rico-brand-orange);
+$rico-warn-palette: mat-palette($mat-red);
+
+// include the custom theme components into a theme object
+$rico-main-theme: mat-light-theme($rico-primary-palette, $rico-accent-palette, $rico-warn-palette);
+
+//select primary and secondary colors
+//$primary-color: map_get($rico-primary-palette, 500);
+//$secondary-color: map_get($rico-accent-palette, 500);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($rico-main-theme)

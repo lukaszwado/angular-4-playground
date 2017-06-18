@@ -1,0 +1,110 @@
+<nav class="rico-categories">
+    <app-collapse>
+        <div collapse-title>Kategorien</div>
+        <div collapse-body>
+            <ul class="rico-categories__list">
+                <li class="rico-categories__list-item">
+                    <a href="#">
+                        Alle <span class="rico-counter">(2999)</span>
+                    </a>
+                </li>
+                <li class="rico-categories__list-item">
+                    <a href="#">
+                        Handy, Festnetz, Funk <span class="rico-counter">(2129)</span>
+                    </a>
+                </li>
+                <li class="rico-categories__list-item">
+                    <a href="#">
+                        Audio, TV & Video <span class="rico-counter">(219)</span>
+                    </a>
+                </li>
+                <li class="rico-categories__list-item">
+                    <a href="#">
+                        Computer & Netzwerk <span class="rico-counter">(134)</span>
+                    </a>
+                </li>
+                <li class="rico-categories__list-item">
+                    <a href="#">
+                        Fahrzeugzubehör <span class="rico-counter">(65)</span>
+                    </a>
+                </li>
+            </ul>
+            <button md-button>ALLE KATEGORIEN ANZEIGEN</button>
+        </div>
+    </app-collapse>
+    <app-collapse>
+        <div collapse-title>Zustand</div>
+        <div collapse-body>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Neu gem. Beschreibung <span
+                        class="rico-counter">(2342)</span></md-checkbox>
+            </div>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Neu & originalverpackt <span
+                        class="rico-counter">(2342)</span></md-checkbox>
+            </div>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Gebraucht <span class="rico-counter">(2342)</span>
+                </md-checkbox>
+            </div>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Defekt <span class="rico-counter">(2342)</span></md-checkbox>
+            </div>
+        </div>
+    </app-collapse>
+    <app-collapse>
+        <div collapse-title>Preis</div>
+        <div collapse-body>
+            <div fxLayout="row">
+                <md-input-container>
+                    <input mdInput placeholder="Von" value="0">
+                </md-input-container>
+                <md-input-container>
+                    <input mdInput placeholder="bis" value="999">
+                </md-input-container>
+            </div>
+            <div fxLayout="row">
+                <md-slider class="rico-filter__slider"
+                           max="999"
+                           min="1"
+                           thumb-label="true"
+                           tick-interval="1"
+                           value="100"
+                           fxFlex>
+                </md-slider>
+            </div>
+        </div>
+    </app-collapse>
+    <app-collapse>
+        <div collapse-title>Lieferung</div>
+        <div collapse-body>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Kostenloser Versand <span
+                        class="rico-counter">(1)</span></md-checkbox>
+            </div>
+            <div class="rico-filter__checkbox-container">
+                <md-checkbox class="rico-filter__checkbox">Abholung durch Käufer <span
+                        class="rico-counter">(2)</span></md-checkbox>
+            </div>
+        </div>
+    </app-collapse>
+    <app-collapse>
+        <div collapse-title>Standort</div>
+        <div collapse-body>
+            <div fxLayout="row">
+                <md-input-container>
+                    <input mdInput placeholder="PLZ">
+                </md-input-container>
+                <md-select class="mat-select--input-align" placeholder="Umkreis" disabled="">
+                </md-select>
+            </div>
+            <div fxLayout="row">
+                oder
+            </div>
+            <md-select class="mat-select--input-align" placeholder="Land">
+            </md-select>
+            <md-select class="mat-select--input-align" placeholder="Kanton">
+            </md-select>
+        </div>
+    </app-collapse>
+</nav>

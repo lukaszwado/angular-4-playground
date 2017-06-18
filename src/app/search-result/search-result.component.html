@@ -1,0 +1,16 @@
+<div class="rico-search-result" [ngClass]="{'rico-search-result--drawer-open': drawerOpen}">
+    <div fxLayout="row" fxLayoutAlign="center">
+        <div class="rico-view-width" fxLayout="row" fxLayoutAlign="center start">
+            <app-search-bar fxFlex></app-search-bar>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+        <div class="rico-view-width" fxLayout="row" fxLayoutAlign="start">
+            <app-filters></app-filters>
+            <div fxFlex>
+                <app-listings></app-listings>
+            </div>
+        </div>
+    </div>
+</div>
+<app-content-drawer></app-content-drawer>

@@ -1,0 +1,43 @@
+@import '../../vars';
+
+@mixin labelStyle() {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.rico-categories {
+  width: 260px;
+  flex: 0 0 300px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.rico-categories__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @include labelStyle()
+}
+
+.rico-categories__list-item {
+  padding: 5px;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.rico-filter__checkbox-container {
+  margin: 5px 0;
+}
+
+.rico-filter__checkbox {
+  @include labelStyle()
+}
+
+.rico-filter__slider {
+  margin: 0 -5px;
+}

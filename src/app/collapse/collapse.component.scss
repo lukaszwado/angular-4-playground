@@ -1,0 +1,18 @@
+@import '../../vars';
+
+.rico-collapse__title {
+  padding: 0 15px 0 7px;
+  margin: 10px 0;
+  border-left: 2px solid map_get($rico-brand-indigo, 100);
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 24px;
+  .mat-icon {
+    color: map_get($rico-brand-indigo, 500)
+  }
+}
+
+.rico-collapse__body {
+  padding: 5px 15px;
+}

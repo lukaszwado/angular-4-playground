@@ -1,0 +1,23 @@
+@import "theme";
+
+:root,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+}
+
+.rico-view-width {
+  flex: 0 1 1200px;
+  max-width: 1200px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.rico-counter {
+  opacity: .5;
+}
+
+.mat-select--input-align{
+  margin-top: 10px;
+}

@@ -1,0 +1,42 @@
+@import '../../vars';
+
+$miniToolbarHeight: 30px;
+
+.main-header {
+  background: #fff;
+  padding: 0 !important;
+}
+
+.main-header--mini {
+  min-height: $miniToolbarHeight;
+  font-size: 14px;
+  background: #444;
+  color: #fff;
+  border-bottom: 2px solid map_get($rico-brand-orange, 500);
+}
+
+.main-header__logo {
+  max-height: 40px;
+  width: 200px;
+  margin: 0 45px 0 0;
+}
+
+.main-header__icon--small {
+  margin-top: -2px;
+  font-size: 18px;
+}
+
+.main-header__icon--large {
+  margin-top: -2px;
+  font-size: 26px;
+  color: map_get($rico-brand-indigo, 500);
+}
+
+.main-header__button--large {
+  .mat-button-wrapper {
+    color: map_get($rico-brand-indigo, 500);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+}

@@ -1,0 +1,16 @@
+.rico-content-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100vw - 300px - (100vw - 1200px));
+  height: 100vh;
+  padding: 15px;
+  background: #fff;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: transform .35s ease-in-out .1s;
+}
+
+.rico-content-drawer--open {
+  transform: translateX(0);
+}
