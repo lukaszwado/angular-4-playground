@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-listings',
   templateUrl: './listings.component.html',
-  styleUrls: ['./listings.component.scss']
+  styleUrls: ['./listings.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ListingsComponent implements OnInit {
 
