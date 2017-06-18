@@ -50,8 +50,7 @@ import {SearchResultComponent} from './search-result/search-result.component';
     MdTabsModule,
     RouterModule.forRoot( [ {
       path: '',
-      component: SearchResultComponent,
-      pathMatch: 'full'
+      component: SearchResultComponent
     } ] )
   ],
   providers: [],
