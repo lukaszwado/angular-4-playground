@@ -1,0 +1,11 @@
+<app-collapse>
+  <div collapse-title>{{filterData.label}}</div>
+  <div collapse-body>
+    <div class="rico-filter__checkbox-container" *ngFor="let element of filterData.elements">
+      <md-checkbox class="rico-filter__checkbox" [value]="element.value" (change)="changeState()">
+        {{element.label}}
+        <span class="rico-counter">{{element.count}}</span>
+      </md-checkbox>
+    </div>
+  </div>
+</app-collapse>

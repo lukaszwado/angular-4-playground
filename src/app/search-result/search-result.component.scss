@@ -1,6 +1,7 @@
 .rico-search-result {
   transform: translateX(0) translateZ(0) scale(1.0, 1.0);
   transition: transform .35s ease-in-out .1s;
+  background: #f9f9f5;
 }
 
 .rico-search-result--drawer-open {

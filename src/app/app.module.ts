@@ -25,9 +25,10 @@ import {SearchBarComponent} from './search-bar/search-bar.component';
 import {ContentDrawerComponent} from './content-drawer/content-drawer.component';
 import {SearchResultComponent} from './search-result/search-result.component';
 
-import {ListingsService} from './listings.service'
+import {ListingsService} from './listings.service';
+import {FilterComponent} from './filter/filter.component'
 
-@NgModule( {
+@NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -37,7 +38,8 @@ import {ListingsService} from './listings.service'
     ListingComponent,
     SearchBarComponent,
     ContentDrawerComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    FilterComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -50,13 +52,13 @@ import {ListingsService} from './listings.service'
     MdSliderModule,
     MdSelectModule,
     MdTabsModule,
-    RouterModule.forRoot( [ {
+    RouterModule.forRoot([{
       path: '',
       component: SearchResultComponent
-    } ] )
+    }])
   ],
-  providers: [ ListingsService ],
-  bootstrap: [ AppComponent ]
-} )
+  providers: [ListingsService],
+  bootstrap: [AppComponent]
+})
 export class AppModule {
 }

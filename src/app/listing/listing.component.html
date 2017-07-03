@@ -3,12 +3,12 @@
    routerLinkActive="rico-listing--active"
    [queryParams]="{productId: listingId}">
     <div>
-        <img class="rico-listing__image"
+        <img class="rico-listing__image mat-elevation-z1"
              [src]="listingDetails.imgSm"
              alt="iPhone 5C 16 GB, Weiss">
     </div>
-    <div class="rico-listing__content" fxFlex fxLayout="row" fxLayoutAlign="start stretch">
-        <section fxLayout="column" fxLayoutAlign="stretch" fxFlex>
+    <div fxFlex fxLayout="row" fxLayoutAlign="start stretch">
+        <section class="rico-listing__content-details" fxLayout="column" fxLayoutAlign="stretch" fxFlex>
             <h1 class="rico-listing__header">
                 {{listingDetails.title}}
             </h1>

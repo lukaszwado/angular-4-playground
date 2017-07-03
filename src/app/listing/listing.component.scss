@@ -1,30 +1,20 @@
 @import '../../vars';
 
 .rico-listing {
-  margin: 10px 0;
-  padding-bottom: 10px;
   border-bottom: 1px solid map_get($rico-brand-indigo, 50);
   cursor: pointer;
-  border-left: 5px solid transparent;
-  transform: translateX(-5px);
   text-decoration: none;
   color: #000;
   &:not(.rico-listing--active ):hover {
-    transition: all .1s ease-in-out .25s;
-    transform: translateX(0);
-    border-color: map_get($rico-brand-orange, 500);
+    background: rgba(0, 0, 0, .02);
   }
   &:not(.rico-listing--active ):active {
-    transition: all .1s ease-in-out;
-    transform: translateX(0);
-    border-color: map_get($rico-brand-indigo, 500);
+    background: rgba(0, 0, 0, .02);
   }
 }
 
 .rico-listing--active {
-  transition: all .2s ease-in-out;
-  cursor: default;
-  border-color: map_get($rico-brand-orange, 500);
+  background: #fff;
   .rico-listing__image {
     transition: opacity .2s ease-in-out;
     opacity: .5;
@@ -34,9 +24,14 @@
 .rico-listing__image {
   width: 160px;
   height: 160px;
+  margin: 10px 0;
 }
 
 .rico-listing__content {
+  //padding: 10px;
+}
+
+.rico-listing__content-details {
   padding: 10px;
 }
 
@@ -68,6 +63,9 @@
 
 .rico-listing__details {
   text-align: right;
+  background: rgba(0, 0, 0, .015);
+  padding: 10px;
+  min-width: 30%;
 }
 
 .rico-listing__price {
