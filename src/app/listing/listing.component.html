@@ -2,10 +2,19 @@
    fxLayout="row" routerLink="/"
    routerLinkActive="rico-listing--active"
    [queryParams]="{productId: listingId}">
-    <div>
+    <div class="rico-listing__image-container">
         <img class="rico-listing__image mat-elevation-z1"
              [src]="listingDetails.imgSm"
              alt="iPhone 5C 16 GB, Weiss">
+        <div class="rico-listing__image-details"
+        [ngClass]="{'rico-listing__image-details--show': drawerOpen}">
+            <div class="rico-listing__price rico-listing__price--in-photo">
+                16 Gebote <span>{{listingDetails.price.auction}}</span>
+            </div>
+            <div class="rico-listing__price rico-listing__price--blue rico-listing__price--in-photo">
+                Sofort kaufen <span>{{listingDetails.price.bunNow}}</span>
+            </div>
+        </div>
     </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="start stretch">
         <section class="rico-listing__content-details" fxLayout="column" fxLayoutAlign="stretch" fxFlex>

@@ -14,10 +14,12 @@
         </a>
     </div>
 </div>
-<md-toolbar class="main-header">
+<md-toolbar class="main-header mat-elevation-z1"
+            [ngClass]="{'main-header--drawer-open': drawerOpen}">
     <div fxLayout="row" fxLayoutAlign="center center" fxFlex="100">
         <div class="rico-view-width" fxLayout="row" fxLayoutAlign="start center">
-            <img class="main-header__logo" src="//style-6a38.kxcdn.com/1.6.2/lib/images/ric-logo__core.svg">
+            <img class="main-header__logo" src="//style-6a38.kxcdn.com/1.6.2/lib/images/ric-logo__core.svg"
+            [ngClass]="{'main-header__logo--drawer-open': drawerOpen}">
             <div fxFlex></div>
             <a md-button class="main-header__button--large" href="#">
                 <md-icon class="material-icons main-header__icon--large">stars</md-icon>

@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
 import {ListingsService} from '../listings.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component( {
   selector: 'app-listing',
@@ -8,6 +9,8 @@ import {ListingsService} from '../listings.service';
   encapsulation: ViewEncapsulation.None
 } )
 export class ListingComponent implements OnInit {
+
+  drawerOpen = false;
 
   @Input( 'listingId' )
   listingId: number;
@@ -25,7 +28,12 @@ export class ListingComponent implements OnInit {
     },
   };
 
-  constructor( private listingSvc: ListingsService ) {
+  constructor( private listingSvc: ListingsService,
+               private route: ActivatedRoute) {
+  }
+
+  checkIfDrawerIsOpen( params ) {
+    return !!params.productId
   }
 
   ngOnInit() {
@@ -35,6 +43,11 @@ export class ListingComponent implements OnInit {
     for ( let property in listingData ) {
       this.listingDetails[ property ] = listingData[ property ]
     }
+
+    this.route.queryParams
+      .subscribe( ( params ) => {
+        this.drawerOpen = this.checkIfDrawerIsOpen( params );
+      } )
   }
 
 }

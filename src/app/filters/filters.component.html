@@ -32,8 +32,8 @@
       <button md-button>ALLE KATEGORIEN ANZEIGEN</button>
     </div>
   </app-collapse>
-  <app-filter *ngFor="let filterData of filters" [filterData]="filterData"></app-filter>
-  <app-collapse>
+  <app-filter *ngFor="let filterData of filters; let i = index" [filterData]="filterData" [open]="i < 1"></app-filter>
+  <app-collapse [open]="false">
     <div collapse-title>Preis</div>
     <div collapse-body>
       <div fxLayout="row">

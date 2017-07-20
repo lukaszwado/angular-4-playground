@@ -13,18 +13,50 @@
   }
 }
 
-.rico-listing--active {
-  background: #fff;
-  .rico-listing__image {
-    transition: opacity .2s ease-in-out;
-    opacity: .5;
-  }
-}
-
 .rico-listing__image {
   width: 160px;
   height: 160px;
-  margin: 10px 0;
+  margin: 4px 2px;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.rico-listing__image-container {
+  position: relative;
+  overflow: hidden;
+  max-height: 168px;
+}
+
+.rico-listing__image-details {
+  opacity: 0;
+  position: absolute;
+  left: 2px;
+  bottom: 5px;
+  width: calc(100% - 4px);
+  text-align: right;
+  padding: 5px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, .8);
+  border-top: 1px solid white;
+  transition: all .15s ease-in-out;
+}
+
+.rico-listing--active {
+  .rico-listing__image {
+    box-shadow: 0 0 0 2px map_get($rico-brand-indigo, 500);
+  }
+}
+
+.rico-listing__image-container:not(:hover) {
+  .rico-listing__image-details--show {
+    opacity: 1;
+  }
+}
+
+.rico-listing__image-container:hover {
+  .rico-listing__image-details--show {
+    transition-delay: 0s;
+    opacity: .5;
+  }
 }
 
 .rico-listing__content {
@@ -82,4 +114,11 @@
 
 .rico-listing__price--blue {
   color: map_get($rico-brand-indigo, 400);
+}
+
+.rico-listing__price--in-photo {
+  font-size: 10px;
+  > span {
+    font-size: 12px;
+  }
 }

@@ -1,9 +1,9 @@
 .rico-search-result {
-  transform: translateX(0) translateZ(0) scale(1.0, 1.0);
-  transition: transform .35s ease-in-out .1s;
+  transform: translateX(0) translateY(0) translateZ(0) scale(1.0, 1.0);
+  transition: transform .25s ease-in-out .1s;
   background: #f9f9f5;
 }
 
 .rico-search-result--drawer-open {
-  transform: translateX(calc((1200px - 100vw) / 2 - 270px)) translateZ(0) scale(1.0, 1.0);
+  transform: translateX(calc((1200px - 100vw) / 2 - 260px)) translateY(-130px) translateZ(0) scale(1.0, 1.0);
 }

@@ -1,4 +1,4 @@
-<form class="main-search" fxLayout="row" fxLayoutAlign="center">
+<form class="main-search" fxLayout="row" fxLayoutAlign="center" [ngClass]="{'main-search--hidden': drawerOpen}">
   <div class="main-search__input-container" fxLayout="row" fxLayoutAlign="start center">
     <md-input-container class="main-search__input" floatPlaceholder="never">
       <input mdInput placeholder="Suchen... more text for better visibility">

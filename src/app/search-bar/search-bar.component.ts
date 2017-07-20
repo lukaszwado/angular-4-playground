@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component( {
   selector: 'app-search-bar',
@@ -8,10 +9,20 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 } )
 export class SearchBarComponent implements OnInit {
 
-  constructor() {
+  drawerOpen = false;
+
+  constructor( private route: ActivatedRoute ) {
+  }
+
+  checkIfDrawerIsOpen( params ) {
+    return !!params.productId
   }
 
   ngOnInit() {
+    this.route.queryParams
+      .subscribe( ( params ) => {
+        this.drawerOpen = this.checkIfDrawerIsOpen( params );
+      } )
   }
 
 }

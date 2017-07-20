@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
 
 @Component( {
   selector: 'app-collapse',
@@ -8,6 +8,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 } )
 export class CollapseComponent implements OnInit {
 
+  @Input('open')
   open = true;
 
   constructor() {
