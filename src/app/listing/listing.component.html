@@ -4,6 +4,7 @@
    [queryParams]="{productId: listingId}">
     <div class="rico-listing__image-container">
         <img class="rico-listing__image mat-elevation-z1"
+             [ngClass]="{'mat-elevation-z1': !drawerOpen}"
              [src]="listingDetails.imgSm"
              alt="iPhone 5C 16 GB, Weiss">
         <div class="rico-listing__image-details"
