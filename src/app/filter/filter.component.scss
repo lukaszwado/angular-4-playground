@@ -1,9 +1,0 @@
-@import '../../vars';
-
-.rico-filter__checkbox-container {
-  margin: 5px 0;
-}
-
-.rico-filter__checkbox {
-  @include labelStyle()
-}
