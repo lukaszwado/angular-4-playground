@@ -7,11 +7,6 @@ $miniToolbarHeight: 30px;
   padding: 0 !important;
   z-index: 1;
   position: relative;
-  transition: transform .25s ease-in-out .1s;
-}
-
-.main-header--drawer-open {
-  transform: translateX(calc((1200px - 100vw) / 2));
 }
 
 .main-header--mini {
@@ -26,14 +21,14 @@ $miniToolbarHeight: 30px;
 
 .main-header__logo {
   max-height: 40px;
-  width: 200px;
+  width: 180px;
   margin: 0 45px 0 0;
   transition: transform .4s ease-in-out;
   transform-origin: 10px 50%;
 }
 
 .main-header__logo--drawer-open {
-  transform: scale(.7, .7);
+  transform: scale(.8, .8);
 }
 
 .main-header__icon--small {

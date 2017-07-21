@@ -1,12 +1,16 @@
-<div class="rico-search-result" [ngClass]="{'rico-search-result--drawer-open': drawerOpen}">
+<div class="rico-search-result__wrapper">
+  <div class="rico-search-result">
     <div fxLayout="row" fxLayoutAlign="center">
-        <div class="rico-view-width" fxLayout="row" fxLayoutAlign="start">
-            <app-filters></app-filters>
-            <div fxFlex>
-                <app-search-bar></app-search-bar>
-                <app-listings></app-listings>
-            </div>
+      <div class="rico-view-width" fxLayout="row" fxLayoutAlign="start">
+        <app-filters></app-filters>
+        <div fxFlex class="rico-search-result_container"
+             [ngClass]="{'rico-search-result_container--drawer-open': drawerOpen}">
+          <app-search-bar></app-search-bar>
+          <app-listings></app-listings>
         </div>
+      </div>
     </div>
+  </div>
+  <app-content-drawer></app-content-drawer>
 </div>
-<app-content-drawer></app-content-drawer>
+

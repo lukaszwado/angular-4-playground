@@ -1,9 +1,17 @@
+.rico-search-result__wrapper{
+  display: block;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+}
 .rico-search-result {
-  transform: translateX(0) translateY(0) translateZ(0) scale(1.0, 1.0);
-  transition: transform .25s ease-in-out .1s;
   background: #f9f9f5;
 }
 
-.rico-search-result--drawer-open {
-  transform: translateX(calc((1200px - 100vw) / 2 - 260px)) translateY(-130px) translateZ(0) scale(1.0, 1.0);
+.rico-search-result_container {
+  transform: translateY(0);
+  transition: transform .25s ease-in-out .1s;
+}
+
+.rico-search-result_container--drawer-open {
+  transform: translateY(-130px);
 }

@@ -1,55 +1,118 @@
-<section class="rico-content-drawer mat-elevation-z4"
+<section class="rico-content-drawer mat-elevation-z24"
          [ngClass]="{
             'rico-content-drawer--open': listingId !== undefined,
             'rico-content-drawer--close': listingId === undefined
             }">
-    <md-toolbar class="rico-content-drawer__header mat-elevation-z1">
-        <span>{{listingDetails.title}}</span>
-        <span fxFlex></span>
-        <button md-icon-button>
-            <md-icon class="material-icons ric-color--red">favorite</md-icon>
-        </button>
-        <button md-icon-button>
-            <md-icon class="material-icons">share</md-icon>
-        </button>
-        <button md-icon-button (click)="close()">
-            <md-icon class="material-icons">close</md-icon>
-        </button>
-    </md-toolbar>
-    <article class="rico-content-drawer__content">
-        <div fxLayout="row">
-            <img class="mat-elevation-z1" [src]="listingDetails.imgLg">
-            <div class="rico-content-drawer__bid" fxFlex fxLayout="column">
-                <div fxLayout="row" class="rico-content-drawer__time">
-                    <div>12:12:25 </div>
-                    <div fxFlex></div>
-                    <div>21 Jul 2017 11:58</div>
-                </div>
-                <div class="rico-content-drawer__actual-price">
-                    Aktueller Preis <span>60.-</span>
-                </div>
-                <md-input-container class="rico-content-drawer__bid-input">
-                    <input mdInput placeholder="Ihr Gebot" value="61.-">
-                </md-input-container>
-                <button md-raised-button color="accent">Gebot abgeben</button>
-            </div>
+  <md-toolbar class="rico-content-drawer__header mat-elevation-z1">
+    <span>{{listingDetails.title}}</span>
+    <span fxFlex></span>
+    <button md-icon-button>
+      <md-icon class="material-icons ric-color--red">favorite</md-icon>
+    </button>
+    <button md-icon-button>
+      <md-icon class="material-icons">share</md-icon>
+    </button>
+    <button md-icon-button (click)="close()">
+      <md-icon class="material-icons">close</md-icon>
+    </button>
+  </md-toolbar>
+  <article class="rico-content-drawer__content">
+    <div fxLayout="row">
+      <img class="mat-elevation-z1" [src]="listingDetails.imgLg">
+      <div class="rico-content-drawer__bid" fxFlex fxLayout="column">
+        <div fxLayout="row" class="rico-content-drawer__time">
+          <div>12:12:25</div>
+          <div fxFlex></div>
+          <div>21 Jul 2017 11:58</div>
         </div>
-        <section>
-            <h1>Beschreibung</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas
-                pulvinar
-                erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
-                molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
-                Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec
-                mattis
-                nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
-                ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris,
-                tempus
-                in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam
-                sit
-                amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
-            </p>
-        </section>
-    </article>
+        <div class="rico-content-drawer__actual-price">
+          Aktueller Preis <span>60.-</span>
+        </div>
+        <md-input-container class="rico-content-drawer__bid-input">
+          <input mdInput placeholder="Ihr Gebot" value="61.-">
+        </md-input-container>
+        <button md-raised-button color="accent">Gebot abgeben</button>
+      </div>
+    </div>
+    <section class="rico-content-drawer__description">
+      <md-tab-group>
+        <md-tab>
+          <ng-template md-tab-label>
+            Beschreibung
+          </ng-template>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas
+            pulvinar
+            erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
+            molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
+            Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec
+            mattis
+            nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
+            ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris,
+            tempus
+            in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam
+            sit
+            amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
+          </p>
+        </md-tab>
+        <md-tab>
+          <ng-template md-tab-label>
+            Zahlung, Lieferung & Garantie
+          </ng-template>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas
+            pulvinar
+            erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
+            molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
+            Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec
+            mattis
+            nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
+            ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris,
+            tempus
+            in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam
+            sit
+            amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
+          </p>
+        </md-tab>
+        <md-tab>
+          <ng-template md-tab-label>
+            Fragen & Antworten
+          </ng-template>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas
+            pulvinar
+            erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
+            molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
+            Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec
+            mattis
+            nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
+            ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris,
+            tempus
+            in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam
+            sit
+            amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
+          </p>
+        </md-tab>
+        <md-tab>
+          <ng-template md-tab-label>
+            Gebote
+          </ng-template>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique congue eleifend. Sed egestas
+            pulvinar
+            erat sodales ultrices. Nullam sagittis augue at ante fringilla dictum. Nullam iaculis bibendum dui. Sed
+            molestie facilisis velit sit amet dictum. Nunc pulvinar quam metus, at malesuada ante scelerisque eget.
+            Etiam sagittis felis feugiat est auctor, non suscipit dui porta. Vivamus tincidunt felis dolor, nec
+            mattis
+            nisi placerat nec. Phasellus fermentum tortor non libero luctus commodo. Donec dignissim ligula non
+            ullamcorper tempus. Proin sit amet massa vel sapien vehicula tempor et ut neque. Etiam nisi mauris,
+            tempus
+            in luctus condimentum, imperdiet id nibh. Donec eget neque ut est consectetur tempus non at odio. Nam
+            sit
+            amet odio non lacus dapibus hendrerit. Nullam non lectus leo.
+          </p>
+        </md-tab>
+      </md-tab-group>
+    </section>
+  </article>
 </section>
