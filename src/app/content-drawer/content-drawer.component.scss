@@ -7,7 +7,6 @@
   width: calc(100% - 170px - 260px + (1200px - 100vw) / 2);
   height: calc(100vh - 36px);
   background: #f9f9f5;
-  background: linear-gradient(to right, rgba(#f9f9f5, .9) 0%, rgba(#f9f9f5, 1) 80%);
   z-index: 1;
   transform: translateX(calc(100% + 30px));
   transition: transform .4s ease-in-out;
@@ -76,4 +75,44 @@
 
 .rico-content-drawer__description {
   padding-top: 15px;
+}
+
+.rico-content-drawer__user-info {
+  position: relative;
+  left: -21px;
+  margin-top: 14px;
+  padding: 7px 7px 3px 28px;
+  background: white;
+  width: calc(100% + 21px);
+  box-sizing: border-box;
+}
+
+.rico-content-drawer__metric {
+  color: map_get($rico-brand-indigo, 500);
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.rico-content-drawer__metric--detail {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: inherit;
+  padding-right: 10px;
+}
+
+.rico-content-drawer__username {
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: map_get($rico-brand-orange, 300);
+}
+
+.rico-content-drawer__address {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  opacity: .6;
 }
